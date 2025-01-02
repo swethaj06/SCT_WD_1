@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunnyside Dairy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdfdfd;
+        }
+
+        .navbar {
+            background-color: rgb(255, 255, 255);
+            padding: 15px 20px;
+            box-shadow: 0 4px 8px white(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            height: 100px;
+            margin-right: 5px;
+            font-family: "Lucida Console";
+            
+        }
+
+        .hero {
+    position: relative;
+    text-align: center;
+    padding: 150px 20px;
+    color: rgb(246, 246, 246);
+    text-shadow: 10px black;
+    overflow: hidden; /* Ensures no overflow from the pseudo-element */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('cow4.jpg') no-repeat center center/cover;
+    filter: blur(1px); /* Adjust the blur intensity */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensures content appears above the blurred background */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 12px 35px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero button:hover {
+    background-color: #e55a00;
+}
+
+
+        .feature-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+
+        .feature-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-section .feature {
+            margin-bottom: 30px;
+        }
+
+        .feature-section img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .feature-section img:hover {
+            transform: scale(1.1);
+        }
+
+        .scrolling-section {
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+
+        .scrolling-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .scrolling-section .scrolling-images {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 5px;
+        }
+
+        .scrolling-section img {
+            
+               border: 1px solid #ddd;
+                  border-radius: 4px;
+                       padding: 5px;
+                 width: 300px;
+                 height: 250px;
+}
+
+        .scrolling-section img:hover {
+            box-shadow: 0 0 10px 10px rgb(238, 193, 15);
+    
+        }
+
+        .footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+    text-align: left;
+}
+
+.footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .col-md-4 {
+    flex: 1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer .col-md-4:first-child {
+    text-align: left;
+}
+
+.footer .col-md-4:last-child {
+    text-align: right;
+}
+
+.footer img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.footer .social-icons a {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.footer .social-icons img {
+    height: 24px;
+    width: 24px;
+}
+
+        .p3 {
+           font-family: "Lucida Console"
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="file.png" alt="Sunnyside Dairy"> 
+            <p class="navbar-brand">sunnyside dairy</p>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#product">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#conduct">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1><b>Fresh Dairy Products Delivered</h1></b>
+        <p><b>Your favorite milk brands at your doorstep</p></b>
+        <button>Order Now</button>
+    </div>
+</section>
+
+<!-- Scrolling Products Section: Sweets -->
+<section id="product" class="scrolling-section">
+    <h2>Delicious Sweets</h2>
+    <div class="scrolling-images">
+        <img src="laddu.jpg" alt="Sweet 1">
+        <img src="KajuKatli.webp" alt="Sweet 2">
+        <img src="gulab.jpg" alt="Sweet 3">
+        <img src="sweet5.jpg" alt="Sweet 4">
+        <img src="mysoor.avif" alt="Sweet 5">
+    </div>
+</section>
+
+<!-- Scrolling Products Section: Milk -->
+<section class="scrolling-section">
+    <h2>Fresh Milk</h2>
+    <div class="scrolling-images">
+        <img src="logo 1.avif" alt="Milk 1">
+        <img src="logo2.webp" alt="Milk 2">
+        <img src="iOrganic-Cow-Milk.jpg" alt="Milk 3">
+        <img src="Aavin_dairy_logo.svg.png" alt="Milk 4">
+        <img src="Nandhini.jpg" alt="Milk 5">
+    </div>
+</section>
+
+<!-- Scrolling Products Section: Ice Cream -->
+<section class="scrolling-section">
+    <h2>Delicious Ice Creams</h2>
+    <div class="scrolling-images">
+        <img src="ice9.jpg" alt="Ice Cream 1">
+        <img src="ice6.jpg" alt="Ice Cream 2">
+        <img src="ice5.png" alt="Ice Cream 3">
+        <img src="diary.png" alt="Ice Cream 4">
+        <img src="ice7.png" alt="Ice Cream 5">
+    </div>
+</section>
+<!-- About Section -->
+<section id="about" class="feature-section">
+    <h2>About Us</h2>
+    <p>Welcome to Sunnyside Dairy, where quality and freshness come together in every product. We are dedicated to bringing you the finest dairy products from well-known brands such as Milky Mist, Aavin, and Amul. Whether you're looking for fresh milk, delicious sweets, or indulgent ice creams, we've got something for everyone!</p>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <h3>Our Story</h3>
+            <p>Founded with the mission to deliver high-quality dairy products directly to your doorstep, Sunnyside Dairy has become a trusted name for families across the region. Our commitment to freshness and sustainability is at the heart of everything we do. We work closely with local dairy farms to ensure that every product is not only fresh but also responsibly sourced.</p>
+        </div>
+        <div class="col-lg-6">
+            <h3>Our Values</h3>
+            <ul>
+                <li><strong>Freshness:</strong> We ensure that all products are delivered fresh to your door, every time.</li>
+                <li><strong>Sustainability:</strong> We partner with eco-conscious farmers to support sustainable practices.</li>
+                <li><strong>Quality:</strong> Our products are rigorously tested to meet the highest quality standards.</li>
+                <li><strong>Customer Satisfaction:</strong> We prioritize customer satisfaction above all else, ensuring your experience with us is always positive.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3>Our Commitment</h3>
+    <p>At Sunnyside Dairy, we are not just about providing dairy products; we are about creating a lifestyle centered around health, freshness, and sustainability. We aim to build long-lasting relationships with our customers, ensuring that every product you purchase from us contributes to a healthier and happier life.</p>
+</section>
+
+<!-- Footer -->
+<footer id="conduct" class="footer">
+    <div class="container">
+        <!-- Logo and Website Name -->
+        <div class="col-md-4">
+            <a href="#" class="navbar-brand">
+                <img src="file.png" alt="Sunnyside Dairy">
+                <span style="font-size: 1.5rem; font-weight: bold;">Sunnyside Dairy</span>
+            </a>
+            <p>Your trusted source for fresh dairy products.</p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="col-md-4">
+            <h4>Contact Us</h4>
+            <ul class="list-unstyled">
+                <li><strong>Email:</strong> support@sunnysidedairy.com</li>
+                <li><strong>Phone:</strong> +1 234 567 890</li>
+                <li><strong>Address:</strong> 123 Dairy Lane, Freshville, Country</li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="col-md-4">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"<p>Facebook<img src="facebook-.webp" alt="Facebook"></a></p>
+                <a href="#"<p>Twitter<img src="twitter-icon-logo-25db10.webp" alt="Twitter"></a></p>
+                <a href="#"<p>Instagram<img src="insta1.webp" alt="Instagram"></a></p>
+            </div>
+        </div>
+    </div>
+    <p class="text-center">&copy; 2024 Sunnyside Dairy. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
